@@ -31,19 +31,24 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_gnhff0g",
+        "template_30t54wj",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "W3GIVtzQJ6j6bxudD"
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
         },
         (error) => {
           setError(true);
         }
       );
+  };
+
+  const mailTo = () => {
+    window.location =
+      "mailto:mohammed.saleh.alsaleh.98@gmail.com?subject=Me&body=Hello mohammad!";
   };
 
   return (
@@ -58,15 +63,31 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <motion.span
+            onClick={mailTo}
+            style={{ cursor: "pointer" }}
+            whileHover={{ color: "orange" }}
+          >
+            mohammed.saleh.alsaleh.98@gmail.com
+          </motion.span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <motion.span
+            style={{ cursor: "pointer" }}
+            whileHover={{ color: "orange" }}
+          >
+            6th of October, 12585 Giza (Egypt)
+          </motion.span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <motion.span
+            style={{ cursor: "pointer" }}
+            whileHover={{ color: "orange" }}
+          >
+            (+20) 1550797654
+          </motion.span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -106,9 +127,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
           {error && "Error"}
           {success && "Success"}

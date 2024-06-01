@@ -1,3 +1,4 @@
+import PhoneSimulator from "../PhoneSimulator/PhoneSimulator";
 import "./hero.scss";
 import { motion } from "framer-motion";
 
@@ -8,6 +9,7 @@ const textVariants = {
   },
   animate: {
     x: 0,
+    paddingInline: "5px",
     opacity: 1,
     transition: {
       duration: 1,
@@ -31,7 +33,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -47,16 +49,20 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
+          <motion.h2 variants={textVariants}>Mohammad Saleh</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+            Mobile Application Developer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
+          {/* <motion.div
+            variants={textVariants}
+            className="buttons"
+            style={{ zIndex: "10" }}
+          >
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
+          </motion.div> */}
           <motion.img
             variants={textVariants}
             animate="scrollButton"
@@ -73,11 +79,46 @@ const Hero = () => {
       >
         Writer Content Creator Influencer
       </motion.div>
-      <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+      <div
+        className="imageContainer"
+        style={{ paddingRight: "60px", paddingBottom: "60px" }}
+      >
+        <PhoneSimulator />
+
+        {/* <img src="/hero.png" alt="" className="imageG" /> */}
       </div>
     </div>
   );
 };
 
 export default Hero;
+
+// const PhoneMockup = () => {
+//   return (
+//     <div className="phone-mockup-container css-selector">
+//       <img src={phone} alt="Phone Mockup" />
+//       <div className="phone-content">
+//         <h1 contentEditable="true" className="editable-header">
+//           Your Awesome App
+//         </h1>
+
+//         <br />
+//         <p contentEditable="true" className="editable-header">
+//           click in text and Try Edit this Text
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const PhoneMockup = () => {
+//   return (
+//     <div className="phone-mockup-container">
+//       <img src={phone} alt="Phone Mockup" className="phone-image" />
+//       <div className="phone-content">
+//         <h1>Your Content Inside the Phone</h1>
+//         <p>This is an example of content inside the phone mockup.</p>
+//       </div>
+//     </div>
+//   );
+// };

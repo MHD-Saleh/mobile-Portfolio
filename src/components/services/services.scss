@@ -144,3 +144,73 @@
     }
   }
 }
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-bottom: 20px;
+  padding-inline: 20px;
+
+  .card {
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; // Add transition to smooth color change on hover
+
+    &:hover {
+      background-color: orange;
+      color: white;
+
+      .title,
+      .body {
+        color: white; // Change color of title and body when card is hovered
+      }
+    }
+
+    .title {
+      cursor: pointer;
+      margin-bottom: 10px;
+      color: orange;
+    }
+
+    .body {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      color: #202020;
+    }
+  }
+
+  // Media query for mobile devices
+  @media (max-width: 767px) {
+    overflow-x: auto; // Horizontal overflow scroll
+    grid-template-columns: repeat(
+      4,
+      auto
+    ); // Each card takes up available space
+    padding: 0 20px; // Add padding to the section to prevent cards from sticking to edges
+
+    .card {
+      min-width: 200px; // Ensure a minimum width for each card
+    }
+  }
+}
+
+.cardd {
+  display: flex;
+  @media (max-width: 767px) {
+    display: block;
+  }
+  .imageStyle {
+    padding-right: 20px;
+    object-fit: cover;
+    // width: 100%;
+    height: 50px;
+  }
+}
