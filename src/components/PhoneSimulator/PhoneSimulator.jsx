@@ -131,7 +131,7 @@ const PhoneSimulator = () => {
             className="editable-header"
             style={{ fontFamily, fontSize, color: fontColor }}
           >
-            Your Awesome App
+            Your Awesome Application
           </h1>
 
           <p
