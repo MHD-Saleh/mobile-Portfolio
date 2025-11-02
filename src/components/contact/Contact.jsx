@@ -77,7 +77,7 @@ const Contact = () => {
             style={{ cursor: "pointer" }}
             whileHover={{ color: "orange" }}
           >
-            Altstadtring 35A, 38118 Braunschweig
+            Altstadtring, 38118 Braunschweig, Germany
           </motion.span>
         </motion.div>
         <motion.div className="item" variants={variants}>
