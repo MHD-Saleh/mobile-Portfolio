@@ -77,7 +77,7 @@ const Contact = () => {
             style={{ cursor: "pointer" }}
             whileHover={{ color: "orange" }}
           >
-            6th of October, 12585 Giza (Egypt)
+            Altstadtring 35A, 38118 Braunschweig
           </motion.span>
         </motion.div>
         <motion.div className="item" variants={variants}>
@@ -86,7 +86,7 @@ const Contact = () => {
             style={{ cursor: "pointer" }}
             whileHover={{ color: "orange" }}
           >
-            (+20) 1550797654
+            (+49) 17673680536
           </motion.span>
         </motion.div>
       </motion.div>
